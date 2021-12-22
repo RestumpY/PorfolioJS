@@ -18,9 +18,12 @@ var imageMe = document.getElementById('imageMe');
 nom.addEventListener('click', function () {
     const newNom = prompt("Entre ton nom :");
 
+    
+
     if (newNom.length > 0){
         nom.textContent = newNom;
     } 
+    
 })
 
 presentation.addEventListener('click', function () {
@@ -97,7 +100,9 @@ skill1.addEventListener('click',function(){
         skill1.firstElementChild.firstElementChild.textContent = newLangage;
         skill1.firstElementChild.lastElementChild.textContent = newPourcentage + "%";
         skill1.lastElementChild.firstElementChild.style.width = newPourcentage + "%";
-    } 
+    }else{
+        console.log('test');
+    }
 })
 
 skill2.addEventListener('click',function(){
