@@ -1,7 +1,7 @@
 //Recuperer les valeurs 
 
 var nom = document.getElementById('name');
-var presentation =document.getElementById('presentation');
+var presentation = document.getElementById('presentation');
 var age = document.getElementById('age');
 var mail = document.getElementById('mail');
 var adresse = document.getElementById('adresse');
@@ -18,35 +18,35 @@ var imageMe = document.getElementById('imageMe');
 nom.addEventListener('click', function () {
     const newNom = prompt("Entre ton nom :");
 
-    
 
-    if (newNom.length > 0){
+
+    if (newNom.length > 0) {
         nom.textContent = newNom;
-    } 
-    
+    }
+
 })
 
 presentation.addEventListener('click', function () {
     const newPresentation = prompt("Entre ta présentation:");
 
-    if (newPresentation.length > 0){
+    if (newPresentation.length > 0) {
         presentation.textContent = newPresentation;
-    } 
-    
+    }
+
 })
 age.addEventListener('click', function () {
     const newAge = prompt("Entre ton âge:");
-    if (newAge.length > 0){
+    if (newAge.length > 0) {
         age.textContent = newAge;
-    } 
-    
+    }
+
 })
 
 mail.addEventListener('click', function () {
     const newMail = prompt("Entre ton mail:");
-    if (newMail.length > 0){
+    if (newMail.length > 0) {
         mail.textContent = newMail;
-    } 
+    }
 
 })
 
@@ -54,17 +54,17 @@ mail.addEventListener('click', function () {
 
 telephone.addEventListener('click', function () {
     const newTelephone = prompt("Entre ton numéro de téléphone:");
-    if (newTelephone.length > 0){
+    if (newTelephone.length > 0) {
         telephone.textContent = newTelephone;
-    } 
+    }
 
 })
 
 adresse.addEventListener('click', function () {
     const newAdresse = prompt("Entre ton adresse:");
-    if (newAdresse.length > 0){
+    if (newAdresse.length > 0) {
         adresse.textContent = newAdresse;
-    } 
+    }
 
 })
 
@@ -72,10 +72,10 @@ imageMe.addEventListener('click', function () {
 
     const newImage = prompt("Entrer le path ou le lien de votre nouvelle image");
 
-    if (newImage.length > 0){
+    if (newImage.length > 0) {
         imageMe.src = newImage;
-    } 
-    
+    }
+
 
 })
 
@@ -92,95 +92,207 @@ var skill8 = document.getElementById('skill8');
 
 
 //Edit les datas de skill
-skill1.addEventListener('click',function(){
-    const newLangage = prompt ('Entrer votre langage');
-    const newPourcentage = prompt ('Entrer votre niveau');
+skill1.addEventListener('click', function () {
+    const newLangage = prompt('Entrer votre langage');
+    const newPourcentage = prompt('Entrer votre niveau');
 
-    if (newLangage.length > 0 && newPourcentage.length > 0 && newPourcentage <=100){
+    if (newLangage.length > 0 && newPourcentage.length > 0 && newPourcentage <= 100) {
         skill1.firstElementChild.firstElementChild.textContent = newLangage;
         skill1.firstElementChild.lastElementChild.textContent = newPourcentage + "%";
         skill1.lastElementChild.firstElementChild.style.width = newPourcentage + "%";
-    }else{
-        console.log('test');
+    } else {
+        skill1.removeEventListener();
     }
 })
 
-skill2.addEventListener('click',function(){
-    const newLangage = prompt ('Entrer votre langage');
-    const newPourcentage = prompt ('Entrer votre niveau');
+skill2.addEventListener('click', function () {
+    const newLangage = prompt('Entrer votre langage');
+    const newPourcentage = prompt('Entrer votre niveau');
 
-    if (newLangage.length > 0 && newPourcentage.length > 0 && newPourcentage <=200){
+    if (newLangage.length > 0 && newPourcentage.length > 0 && newPourcentage <= 200) {
         skill2.firstElementChild.firstElementChild.textContent = newLangage;
         skill2.firstElementChild.lastElementChild.textContent = newPourcentage + "%";
         skill2.lastElementChild.firstElementChild.style.width = newPourcentage + "%";
-    }else{
+    } else {
         skill2.removeEventListener();
     }
 })
 
-skill3.addEventListener('click',function(){
-    const newLangage = prompt ('Entrer votre langage');
-    const newPourcentage = prompt ('Entrer votre niveau');
+skill3.addEventListener('click', function () {
+    const newLangage = prompt('Entrer votre langage');
+    const newPourcentage = prompt('Entrer votre niveau');
 
-    if (newLangage.length > 0 && newPourcentage.length > 0 && newPourcentage <=300){
+    if (newLangage.length > 0 && newPourcentage.length > 0 && newPourcentage <= 300) {
         skill3.firstElementChild.firstElementChild.textContent = newLangage;
         skill3.firstElementChild.lastElementChild.textContent = newPourcentage + "%";
         skill3.lastElementChild.firstElementChild.style.width = newPourcentage + "%";
-    } 
+    } else {
+        skill3.removeEventListener();
+    }
 })
 
-skill4.addEventListener('click',function(){
-    const newLangage = prompt ('Entrer votre langage');
-    const newPourcentage = prompt ('Entrer votre niveau');
+skill4.addEventListener('click', function () {
+    const newLangage = prompt('Entrer votre langage');
+    const newPourcentage = prompt('Entrer votre niveau');
 
-    if (newLangage.length > 0 && newPourcentage.length > 0 && newPourcentage <=400){
+    if (newLangage.length > 0 && newPourcentage.length > 0 && newPourcentage <= 400) {
         skill4.firstElementChild.firstElementChild.textContent = newLangage;
         skill4.firstElementChild.lastElementChild.textContent = newPourcentage + "%";
         skill4.lastElementChild.firstElementChild.style.width = newPourcentage + "%";
-    } 
+    } else {
+        skill4.removeEventListener();
+    }
 })
 
-skill5.addEventListener('click',function(){
-    const newLangage = prompt ('Entrer votre langage');
-    const newPourcentage = prompt ('Entrer votre niveau');
+skill5.addEventListener('click', function () {
+    const newLangage = prompt('Entrer votre langage');
+    const newPourcentage = prompt('Entrer votre niveau');
 
-    if (newLangage.length > 0 && newPourcentage.length > 0 && newPourcentage <=500){
+    if (newLangage.length > 0 && newPourcentage.length > 0 && newPourcentage <= 500) {
         skill5.firstElementChild.firstElementChild.textContent = newLangage;
         skill5.firstElementChild.lastElementChild.textContent = newPourcentage + "%";
         skill5.lastElementChild.firstElementChild.style.width = newPourcentage + "%";
-    } 
+    } else {
+        skill5.removeEventListener();
+    }
 })
 
-skill6.addEventListener('click',function(){
-    const newLangage = prompt ('Entrer votre langage');
-    const newPourcentage = prompt ('Entrer votre niveau');
+skill6.addEventListener('click', function () {
+    const newLangage = prompt('Entrer votre langage');
+    const newPourcentage = prompt('Entrer votre niveau');
 
-    if (newLangage.length > 0 && newPourcentage.length > 0 && newPourcentage <=600){
+    if (newLangage.length > 0 && newPourcentage.length > 0 && newPourcentage <= 600) {
         skill6.firstElementChild.firstElementChild.textContent = newLangage;
         skill6.firstElementChild.lastElementChild.textContent = newPourcentage + "%";
         skill6.lastElementChild.firstElementChild.style.width = newPourcentage + "%";
-    } 
+    } else {
+        skill6.removeEventListener();
+    }
 })
 
-skill7.addEventListener('click',function(){
-    const newLangage = prompt ('Entrer votre langage');
-    const newPourcentage = prompt ('Entrer votre niveau');
+skill7.addEventListener('click', function () {
+    const newLangage = prompt('Entrer votre langage');
+    const newPourcentage = prompt('Entrer votre niveau');
 
-    if (newLangage.length > 0 && newPourcentage.length > 0 && newPourcentage <=700){
+    if (newLangage.length > 0 && newPourcentage.length > 0 && newPourcentage <= 700) {
         skill7.firstElementChild.firstElementChild.textContent = newLangage;
         skill7.firstElementChild.lastElementChild.textContent = newPourcentage + "%";
         skill7.lastElementChild.firstElementChild.style.width = newPourcentage + "%";
-    } 
+    } else {
+        skill7.removeEventListener();
+    }
 })
 
-skill8.addEventListener('click',function(){
-    const newLangage = prompt ('Entrer votre langage');
-    const newPourcentage = prompt ('Entrer votre niveau');
+skill8.addEventListener('click', function () {
+    const newLangage = prompt('Entrer votre langage');
+    const newPourcentage = prompt('Entrer votre niveau');
 
-    if (newLangage.length > 0 && newPourcentage.length > 0 && newPourcentage <=800){
+    if (newLangage.length > 0 && newPourcentage.length > 0 && newPourcentage <= 800) {
         skill8.firstElementChild.firstElementChild.textContent = newLangage;
         skill8.firstElementChild.lastElementChild.textContent = newPourcentage + "%";
         skill2.lastElementChild.firstElementChild.style.width = newPourcentage + "%";
-    } 
+    } else {
+        skill8.removeEventListener();
+    }
 })
+
+
+//Modifier les datas dans Experiences
+var experience1 = document.getElementById('experience1');
+var experience2 = document.getElementById('experience2');
+var experience3 = document.getElementById('experience3');
+
+
+
+experience1.addEventListener('click', function () {
+
+
+
+    for (i = 0; i < 5; i++) {
+
+        var newData = prompt(experience1.getElementsByClassName('col-sm-2')[i].textContent.trim());
+
+        if (newData.length > 0) {
+            experience1.getElementsByClassName('col-sm-10')[i].textContent = newData;
+        } else {
+            experience1.removeEventListener();
+        }
+
+
+
+    }
+
+})
+
+experience2.addEventListener('click', function () {
+
+
+
+    for (i = 0; i < 5; i++) {
+
+        var newData = prompt(experience2.getElementsByClassName('col-sm-2')[i].textContent.trim());
+        experience2.getElementsByClassName('col-sm-10')[i].textContent = newData;
+
+    }
+
+})
+
+experience3.addEventListener('click', function () {
+
+
+
+    for (i = 0; i < 5; i++) {
+
+        var newData = prompt(experience3.getElementsByClassName('col-sm-2')[i].textContent.trim());
+        experience3.getElementsByClassName('col-sm-10')[i].textContent = newData;
+
+    }
+
+})
+
+//Modifier les datas dans Formations
+
+var formation1 = document.getElementById('formation1');
+
+formation1.addEventListener('click', function () {
+
+
+var newData = prompt('Entrer le nom de votre formation');
+var newData1 = prompt ('Entrer où et quand :')
+   
+
+document.getElementById('formation1').firstElementChild.textContent = newData;
+document.getElementById('formation1').lastElementChild.textContent = newData1;
+
+})
+
+var formation2 = document.getElementById('formation2');
+
+formation2.addEventListener('click', function () {
+
+
+var newData = prompt('Entrer le nom de votre formation');
+var newData1 = prompt ('Entrer où et quand :')
+   
+
+document.getElementById('formation2').firstElementChild.textContent = newData;
+document.getElementById('formation2').lastElementChild.textContent = newData1;
+
+})
+
+var formation3 = document.getElementById('formation3');
+
+formation3.addEventListener('click', function () {
+
+
+var newData = prompt('Entrer le nom de votre formation');
+var newData1 = prompt ('Entrer où et quand :')
+   
+
+document.getElementById('formation3').firstElementChild.textContent = newData;
+document.getElementById('formation3').lastElementChild.textContent = newData1;
+
+})
+    
+
 
