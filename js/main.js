@@ -1,7 +1,7 @@
 //Recuperer les valeurs 
 
 var nom = document.getElementById('name');
-var presentation = document.getElementById('presentation');
+var presentation = document.getElementById('presentation1');
 var age = document.getElementById('age');
 var mail = document.getElementById('mail');
 var adresse = document.getElementById('adresse');
@@ -18,10 +18,10 @@ var imageMe = document.getElementById('imageMe');
 nom.addEventListener('click', function () {
     const newNom = prompt("Entre ton nom :");
 
-
-
     if (newNom.length > 0) {
         nom.textContent = newNom;
+    }else{
+        nom.removeEventListener();
     }
 
 })
@@ -34,6 +34,8 @@ presentation.addEventListener('click', function () {
     }
 
 })
+
+
 age.addEventListener('click', function () {
     const newAge = prompt("Entre ton âge:");
     if (newAge.length > 0) {
@@ -294,5 +296,157 @@ document.getElementById('formation3').lastElementChild.textContent = newData1;
 
 })
     
+var buttonAddExperience = document.getElementById('addExperience');
 
 
+buttonAddExperience.addEventListener('click',function(){
+
+    var row = document.getElementById('experiences');
+
+    newDiv = document.createElement('div');
+
+    newDiv.setAttribute('class','row mt-3 hover-effect');
+    newDiv.setAttribute('id','experience');
+
+    row.appendChild(newDiv);
+
+    for (h=1 ; h <= 5; h++){
+
+        if(h == 1){
+            var text = "Poste:"
+        }else if(h == 2) {
+            var text = "Entreprise:"
+        }else if(h == 3) {
+            var text = "Lieu:"
+        }else if(h == 4) {
+            var text = "Date:"
+        }else if(h == 5) {
+            var text = "Description:"
+        }
+        
+        newDiv2 = document.createElement('div')
+        newDiv2.setAttribute('class','col-sm-2');
+
+        newDiv3 = document.createElement('div');
+        newDiv3.setAttribute('class','pb-1');
+        newDiv3.textContent = text;
+
+        newDiv2.appendChild(newDiv3);
+        newDiv.appendChild(newDiv2);
+
+        newDiv4 = document.createElement('div');
+        newDiv4.setAttribute('class','col-sm-10');
+
+        newDiv5 = document.createElement('div');
+        newDiv5.setAttribute('class','pb-1 fw-bolder');
+        newDiv5.textContent = prompt(text);
+
+        newDiv4.appendChild(newDiv5);
+        newDiv.appendChild(newDiv4);
+
+
+
+    }
+
+
+})
+var buttonDeleteExperience = document.getElementById ('deleteExperience');
+
+buttonDeleteExperience.addEventListener('click',function(){
+
+    var row = document.getElementById('experiences').getElementsByClassName('row mt-3 hover-effect');
+
+
+    for(i = 2; i >= 0 ; i = i-1){
+
+        row[i].remove();
+
+    }
+})
+
+
+var buttonDeleteFormation = document.getElementById('deleteFormation');
+buttonDeleteFormation.addEventListener('click',function(){
+
+    var row = document.getElementById('formations').getElementsByClassName('hover-effect');
+
+
+    for(i = 2; i >= 0 ; i = i-1){
+
+        row[i].remove();
+
+    }
+})
+
+var buttonDeleteSkill = document.getElementById('deleteSkill');
+
+buttonDeleteSkill.addEventListener('click',function(){
+
+    var row = document.getElementById('skill').getElementsByClassName('py-1');
+
+
+    for(i = 7; i >= 0 ; i = i-1){
+
+        row[i].remove();
+
+    }
+
+})
+
+
+var buttonAddSkill = document.getElementById('addSkill');
+
+var j = 0;
+
+buttonAddSkill.addEventListener('click',function(){
+
+j = j + 1;
+    
+    var row = document.getElementById('skill').getElementsByClassName('col-md-5');
+    
+
+
+
+    newDiv = document.createElement('div');
+
+    
+
+    newDiv.setAttribute("id", `skill${j}`);
+    newDiv.setAttribute("class","py-1");
+
+    row.firstElementChild.appendChild(newDiv);
+
+    newDiv1 = document.createElement('div');
+    newDiv1.setAttribute("class","d-flex text-small fw-bolder");
+
+    newSpan1 = document.createElement('span');
+    newSpan1.setAttribute("class","me-auto");
+
+    newSpan1Text = prompt('Entrer votre langage informatique');
+    newSpan1.textContent = newSpan1Text;
+
+    newSpan2 = document.createElement('span');
+
+    newSpan2Text = prompt('Entrer votre niveau');
+    newSpan2.textContent = newSpan2Text + "%";
+
+
+    newDiv2 = document.createElement('div');
+    newDiv2.setAttribute("class","progress my-1");
+
+    newDiv3 = document.createElement('div');
+    newDiv3.setAttribute('class','progress-bar bg-primary');
+    newDiv3.setAttribute('role','progressbar');
+    newDiv3.setAttribute('style',`width: ${newSpan2Text}%`);
+
+    newDiv2.appendChild(newDiv3);
+
+  
+
+    newDiv1.appendChild(newSpan1);
+    newDiv1.appendChild(newSpan2);
+
+    newDiv.appendChild(newDiv1);
+    newDiv.appendChild(newDiv2);
+    
+})
