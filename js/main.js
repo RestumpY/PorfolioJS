@@ -295,9 +295,9 @@ document.getElementById('formation3').firstElementChild.textContent = newData;
 document.getElementById('formation3').lastElementChild.textContent = newData1;
 
 })
-    
-var buttonAddExperience = document.getElementById('addExperience');
 
+var buttonAddExperience = document.getElementById('addExperience');
+k = 1;
 
 buttonAddExperience.addEventListener('click',function(){
 
@@ -306,11 +306,17 @@ buttonAddExperience.addEventListener('click',function(){
     newDiv = document.createElement('div');
 
     newDiv.setAttribute('class','row mt-3 hover-effect');
-    newDiv.setAttribute('id','experience');
+
+    newDiv.setAttribute('id',`experience${k}`);
+
+    
+    
 
     row.appendChild(newDiv);
 
     for (h=1 ; h <= 5; h++){
+
+        
 
         if(h == 1){
             var text = "Poste:"
@@ -347,7 +353,7 @@ buttonAddExperience.addEventListener('click',function(){
 
 
     }
-
+k++;
 
 })
 var buttonDeleteExperience = document.getElementById ('deleteExperience');
@@ -402,7 +408,9 @@ buttonAddSkill.addEventListener('click',function(){
 
 j = j + 1;
     
-    var row = document.getElementById('skill').getElementsByClassName('col-md-5');
+    var row = document.getElementById('skill').getElementsByClassName('col-md-5')[0];
+
+    console.log(document.getElementById('skill').getElementsByClassName('col-md-5')[0]);
     
 
 
@@ -414,7 +422,7 @@ j = j + 1;
     newDiv.setAttribute("id", `skill${j}`);
     newDiv.setAttribute("class","py-1");
 
-    row.firstElementChild.appendChild(newDiv);
+    row.appendChild(newDiv);
 
     newDiv1 = document.createElement('div');
     newDiv1.setAttribute("class","d-flex text-small fw-bolder");
