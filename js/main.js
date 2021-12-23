@@ -371,6 +371,27 @@ buttonDeleteExperience.addEventListener('click',function(){
 })
 
 
+var buttonAddFormation = document.getElementById('addFormation');
+buttonAddFormation.addEventListener('click',function(){
+    var row = document.getElementById('formations');
+    var newDiv = document.createElement ('div');
+    newDiv.setAttribute('class','hover-effect')
+    newDiv.setAttribute('id',`formation`)
+
+    newH5 = document.createElement('h5');
+    newH5.setAttribute('class','h5 my-1 text-left');
+    newH5.textContent = prompt('Entrer votre formation');
+
+    var newP = document.createElement('p');
+    newP.textContent = prompt ('Entrer votre école et la date');
+
+    newDiv.append(newH5,newP);
+
+    row.append (newDiv);
+
+
+})
+
 var buttonDeleteFormation = document.getElementById('deleteFormation');
 buttonDeleteFormation.addEventListener('click',function(){
 
