@@ -385,7 +385,8 @@ buttonAddFormation.addEventListener('click',function(){
     var newP = document.createElement('p');
     newP.textContent = prompt ('Entrer votre école et la date');
 
-    newDiv.append(newH5,newP);
+    newDiv.append(newH5);
+    newDiv.append(newP);
 
     row.append (newDiv);
 
@@ -478,4 +479,65 @@ j = j + 1;
     newDiv.appendChild(newDiv1);
     newDiv.appendChild(newDiv2);
     
+})
+
+
+
+
+var buttonAddProjet = document.getElementById('addProjet');
+
+buttonAddProjet.addEventListener ('click',function(){
+
+    var row = document.getElementById('projets')
+
+    newDiv = document.createElement('div');
+    newDiv.setAttribute ('class','grid-item')
+
+    newA = document.createElement('a');
+    newA.setAttribute('href','#')
+
+    newFigure = document.createElement('figure');
+    newFigure.setAttribute ('class','portfolio-item');
+
+    newImg = document.createElement('img')
+    var src = prompt("Entrer le path ou le lien de l'image");
+    newImg.setAttribute ('src',src);
+
+    newFigcaption = document.createElement('figcaption');
+
+    newH4 = document.createElement('h4');
+    newH4.setAttribute('class','h5 mb-0');
+    var nomProjet = prompt('Entrer le nom du projet')
+    newH4.textContent = nomProjet;
+
+    newFigcaption.appendChild(newH4);
+    newFigure.appendChild(newImg);
+    newFigure.appendChild(newFigcaption);
+
+    newA.appendChild(newFigure);
+
+    newDiv.appendChild(newA);
+
+    row.appendChild(newDiv);
+   
+})
+
+
+
+var buttonDeleteProjet = document.getElementById('deleteProjet');
+
+buttonDeleteProjet.addEventListener('click',function(){
+
+    var row = document.getElementById('projets').getElementsByClassName("grid-item");
+    
+
+
+    for(i = 3; i >= 0 ; i = i-1){
+
+        row[i].remove();
+
+    }
+
+
+
 })
